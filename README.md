@@ -85,7 +85,7 @@ recept-app/
 ## 6. REST API végpontok
 | Módszer | Útvonal | Query/body | Válasz |
 |---------|---------|-----------|--------|
-| GET | `/api/recipes?query=csirkepaprikás` | – | { title, image, id, … }[ ] |
+| GET | `/api/recipes?query=tomato` | – | { title, image, id, … }[ ] |
 | GET | `/api/recipes?id=123` | – | Részletes recept (Spoonacular raw) |
 | GET | `/api/shopping-list` | – | ShoppingListItem[ ] |
 | POST | `/api/shopping-list` | `{ ingredientName, quantity, unit }` | `{ success: true }` |
@@ -108,26 +108,12 @@ recept-app/
 | `LoadingSpinner.svelte` | Async indikátor |
 | `Footer.svelte` | Lábléc |
 
-## 8. Tesztelés
-Jelenleg nincs beállítva teszt‑keretrendszer. Javasolt:
-- **Vitest** ± `@sveltejs/kit/vitest` komponens‑ és endpoint‑tesztekhez
-- **Playwright** end‑to‑end felhasználói flowhoz
 
-## 9. Build & deploy
+## 8. Build & deploy
 ```bash
 npm run build     # statikus + SSR bundle a .svelte-kit/output könyvtárba
 npm run preview   # helyi pr
 ```
 - **Adapter:** Alapértelmezetten nincs adapter beállítva. Válassz `@sveltejs/adapter-node`‑ot (klasszikus backend) vagy `@sveltejs/adapter-vercel`‑t (edge/funkció) a célplatformtól függően.
 
-## 10. Hozzájárulás
-1. Fork → Branch (`feat/…`) → PR
-2. Fut­tasd az eslint + prettier hookokat: `npm run lint && npm run format`
-3. Írj rövid, címkézett commit‑üzeneteket (Conventional Commits támogatott)
-
-## 11. Licenc
-MIT (lásd `LICENSE` – hiányzik, javasolt pótolni)
-
----
-*Kérdések vagy hibák esetén nyiss egy Issue‑t vagy írj a repo tulajdonosának.*
 
